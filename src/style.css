@@ -164,4 +164,18 @@ header {
       }
     }
   }
+  .hero-yellow {
+    flex: 1;
+    background-image: url("/images/Pann2.JPG");
+    border-radius: 30px;
+    padding: 0px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    img {
+      margin-top: -50px;
+      max-width: 420px;
+      margin-bottom: 0%;
+    }
+  }
 }
