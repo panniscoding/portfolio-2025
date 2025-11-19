@@ -20,3 +20,52 @@
   --blue-400: #61dafb;
   --blue-800: #0a61ae;
 }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 20px;
+  padding-bottom: 1000px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--blue);
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1440px;
+  margin: auto;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  ul {
+    display: flex;
+    list-style-type: none;
+    gap: 5px;
+    li {
+      display: inline-block;
+      a {
+        display: inline-block;
+        padding: 10px 20px;
+        color: var(--base);
+        &:hover {
+          background-color: var(--base-100);
+          border-radius: 10px;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
