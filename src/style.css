@@ -130,6 +130,18 @@ header {
     }
   }
 }
+section {
+  max-width: 1440px;
+  margin: auto;
+  gap: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  @media (max-width: 1440px;) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
 .hero {
   display: flex;
   @media (max-width: 1024px) {
