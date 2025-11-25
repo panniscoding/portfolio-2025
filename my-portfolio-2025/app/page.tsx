@@ -1,65 +1,256 @@
+"use client";
+import { useState } from "react";
 import Image from "next/image";
 
-export default function Home() {
+
+
+  const toggleMobileMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+       <header>
+      <a href="#" className="logo-holder">
+        <div className="logo">
+          <img src="images/logo.webp" alt="logo" width="48" />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+        <div className="logo-text">Pann's Portfolio</div>
+      </a>
+      <nav>
+        <ul id="menu">
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#skills">Skill</a>
+          </li>
+          <li>
+            <a href="#projects">Projects</a>
+          </li>
+          <li>
+            <a href="mailto:panneiphyu.ms@gmail.com" className="button"
+              >Contact Me </a>
+          </li>
+        </ul>
+        <a href="#" className="mobile-toggle" onclick="toggleMobileMenu();">
+          <svg
+            className="w-6 h-6 text-gray-800 dark:text-white"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-width="2"
+              d="M5 7h14M5 12h14M5 17h10"
             />
-            Deploy Now
+          </svg>
+        </a>
+      </nav>
+    </header>
+    <main>
+      <section className="hero container">
+        <div className="hero-blue">
+          <div>
+            <h1>
+              <small>Hi I'm</small>
+              Pann 🌸,
+            </h1>
+            <p>
+              Junior Developer with a unique blend of technical expertise and
+              high-end hospitality experience. I specialize in creating
+              efficient, scalable solutions that prioritize client needs and
+              user experience. When I'm not coding, you'll find me enjoying the
+              hoppy bitterness of a good Guinness 🖤
+            </p>
+            <div className="call-to-action">
+              <a href="./src/Pann_Tech_Resume.pdf" className="button black">
+                View Resume
+              </a>
+              <a href="mailto:panneiphyu.ms@gmail.com" className="button white">
+                Contact Me
+              </a>
+            </div>
+            <div className="social-links">
+              <a href="#">
+                <img src="./images/github.png" alt="GitHub" width="48" />
+              </a>
+              <a href="#">
+                <img src="./images/linkedin.png" alt="LinkedIn" width="48" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className="hero-yellow">
+          <img src="./images/pann.png" alt="Pann" width="100%" />
+        </div>
+      </section>
+      <section className="logos container">
+        <div className="marquee">
+          <div className="track">
+            <img src="./images/html.png" alt="HTML" width="128" />
+            <img src="./images/css.png" alt="CSS" width="128" />
+            <img src="./images/javascript.png" alt="JS" width="128" />
+            <img src="./images/react.png" width="128" alt="React" />
+            <img src="./images/vscode.png" width="128" alt="VS Code" />
+            <img src="./images/python.png" width="128" alt="Python" />
+            <img src="./images/seo.png" alt="SEO" width="128" />
+            <img src="./images/icon-AI.png" alt="AI" width="128" />
+          
+            <img src="./images/html.png" alt="HTML" width="128" />
+            <img src="./images/css.png" alt="CSS" width="128" />
+            <img src="./images/javascript.png" alt="JS" width="128" />
+            <img src="./images/react.png" width="128" alt="React" />
+            <img src="./images/vscode.png" width="128" alt="VS Code" />
+            <img src="./images/python.png" width="128" alt="Python" />
+            <img src="./images/seo.png" alt="SEO" width="128" />
+            <img src="./images/icon-AI.png" alt="AI" width="128" />
+          </div>
+        </div>
+      </section>
+      <section id="skills" className="skills container">
+        <h2>
+          <small> About Me</small>
+          Skills
+        </h2>
+        <div className="holder-blue">
+          <div className="left-column">
+            <h3>Frontend</h3>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>React</li>
+              <li>GIT</li>
+              <li>Responsive</li>
+              <li>SEO</li>
+              <li>AJAX/API</li>
+            </ul>
+            <h3>Backend</h3>
+            <ul>
+              <li>Java</li>
+              <li>Python</li>
+              <li>Node.js</li>
+              <li>PHP</li>
+            </ul>
+          </div>
+          <div className="right-column">
+            <h3>Get to know me a bit</h3>
+            <p>
+              I'm a career-changing Junior Developer with 10 years of
+              hospitality management experience, now channeling my passion for
+              problem-solving into full-stack development. My decade managing
+              high-end operations taught me to build efficient systems under
+              pressure, anticipate user needs, and lead diverse teams through
+              complex challenges.
+            </p>
+            <p>
+              Currently working as Personal Assistant at a branding consultancy
+              and Financial Controller at the Fashion Store while dedicating
+              every available hour to mastering my technical skills across the
+              entire stack. I'm seeking my first tech role where I can bring my
+              operational mindset, client-focused approach, and hunger to learn
+              to a development team that values diverse perspectives.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="projects" className="project container">
+        <h2>
+          <small>Previous</small>
+          Completed Projects
+        </h2>
+        <div className="project-grid">
+          <a href="http://www.canapa-x.com" className="project-item">
+            <img src="./images/canapa-web.png" alt="Canapa-X" width="100%" />
           </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
+          <a href="#" className="project-item">
+            <img
+              src="./images/Python_AI_project.png"
+              alt="Python-AI"
+              width="100%"
+            />
+          </a>
+
+          <a href="www.amsterboat.com" className="project-item">
+            <img src="./images/amsterboat.jpg" alt="" width="100%" />
+          </a>
+          <a href="#" className="project-item">
+            <img src="./images/weather.png" alt="Js-weather-app" width="100%" />
+          </a>
+
+          <a href="#" className="project-item">
+            <img
+              src="./images/HTML, CSS project.png"
+              alt="Css-workshop"
+              width="100%"
+            />
+          </a>
+          <a href="#" className="project-item">
+            <img
+              src="./images/Python_Project.png"
+              alt="Python-project"
+              width="100%"
+            />
           </a>
         </div>
-      </main>
-    </div>
+      </section>
+      <section className="chatbot container">
+        <h2>
+          <small>Talk to me</small>
+          Chatbot
+        </h2>
+        <div className="chatbot-blue">
+          <div className="chat-info">
+            <h3>Azure AI Chatbot</h3>
+            <p>
+              I've put a Chatbot here which knows all my skills and has a copy
+              of my CV. You can ask questions about me to get a better idea of
+              who I am and what I've done.
+            </p>
+            <p>
+              You can also download my CV here if you want to take a look at it.
+              I'm currently looking for new opportunnities so if you hace a
+              project you think I'd be a good fit for, please get in touch!
+            </p>
+            <a href="./src/Pann_Tech_Resume.pdf" className="button black">
+              Download my Resume
+            </a>
+          </div>
+          <div className="chat-box">
+            <div className="scroll-area">
+              <ul id="chat-log">
+                <li>
+                  <span className="avatar bot">AI</span>
+                  <div className="message">
+                    Hi, I'm a friendly chatbot that lets you interactive with
+                    this portfolio and CV. How can I help?
+                  </div>
+                </li>
+                <li>
+                  <span className="avatar user">User</span>
+                  <div className="message">
+                    I have a question to ask you about this resume
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div className="chat-message">
+              <input
+                type="text"
+                placeholder="Hey Pann, what skills are you best at?"
+              />
+              <button className="button black">Send</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    </>
   );
 }
